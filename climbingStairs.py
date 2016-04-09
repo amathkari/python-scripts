@@ -23,12 +23,15 @@ arr=str1.split(' ')
 a=int(arr[0])
 b=int(arr[1])
 n=int(arr[2])
-stairs=0
-days=1
-while stairs<n:
-	stairs=stairs+a
-	if stairs<n:
-		days=days+1
-		stairs=stairs-b
+interval=a-b
+#stairs=0
+#print n
+#print interval
+#print n/interval
+#print n%interval
+days=int(n)/int(interval)
+if n%interval>b:
+        days=days+1
+else:
+        days=days-(b/interval)
 print days
-	
